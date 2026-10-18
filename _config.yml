@@ -1,0 +1,10 @@
+title: Naz's Network+ Lab Notebook
+description: Hands-on lab walkthroughs from the Calbright Network Technology program (CompTIA Network+ N10-009).
+theme: minima
+show_excerpts: true
+minima:
+  skin: dark
+  date_format: "%B %-d, %Y"
+header_pages:
+  - about.md
+  - labs.md
