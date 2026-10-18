@@ -66,13 +66,13 @@ S1# exit
 
 My answers, as I wrote them down during the lab.
 
-**What is the setting for bits per second?** [ ]
+**What is the setting for bits per second?** 9600
 
-**What is the prompt displayed on the screen?** The prompt displayed on the screen is Pres RETURN to get started! After pressing RETURN, we see terminal line 1 labeled S1>.
+**What is the prompt displayed on the screen?** The prompt displayed on the screen is Press RETURN to get started! After pressing RETURN, we see terminal line 1 labeled S1>.
 
 **Which command begins with the letter "C"?** [ ]
 
-**Which commands are displayed?** Typing "?" I get a list of EXEC commands. Typing "t?" I get all commands starting with the letter "t". Typing "te?" I get a list of commands that contain "te".
+**Which commands are displayed?** Typing "?" I get a list of EXEC commands. Typing "t?" I get all commands starting with the letter "t". Typing "te?" I get a list of commands that start with "te".
 
 **What information is displayed for the enable command?** It states that "enable" turns on privileged commands.
 
