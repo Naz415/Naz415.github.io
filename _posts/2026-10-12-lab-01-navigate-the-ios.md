@@ -3,12 +3,12 @@ layout: post
 title: "Lab 1: Navigate the IOS (Packet Tracer)"
 tags: [module-11, packet-tracer, cisco-ios]
 ---
-<!-- Naz: the setup, the command log and the lab's questions below come straight from your saved Packet Tracer file (Lab 1-Packet Tracer - Navigate the IOS (1).pka, worked Oct 12). Replace every line in [brackets] with your own words, then drop your screenshots into assets/img/lab-01/ and fix the image names. Delete this comment when you're done. -->
+<!-- Naz: the setup and the command log come straight from your saved Packet Tracer file (Lab 1-Packet Tracer - Navigate the IOS (1).pka, worked Oct 12). The answers and screenshots come from Module11_Lab_Complete.docx; your name is blacked out of the screenshots. Replace every line in [brackets] with your own words. Delete this comment when you're done. -->
 
 **Module:** IT533 Module 11, Cisco IOS basics
 **Tools:** Cisco Packet Tracer
 **Devices:** PC1, S1 (Catalyst 2960-24TT)
-**Time:** about an hour (11:00 to 12:00 by the command log)
+**Time:** 1 hour 10 minutes (Packet Tracer timer)
 
 ## What the lab asked for
 
@@ -64,19 +64,46 @@ S1# exit
 
 ## The lab's questions
 
-[Answer each one in your own words.]
+My answers, as I wrote them down during the lab.
 
-- What is the setting for bits per second? [ ]
-- What is the prompt displayed on the screen? [ ]
-- Which command begins with the letter "C" (at `S1>`)? [ ]
-- Which commands are displayed for `t?` and for `te?` [ ]
-- What information is displayed for the `enable` command? [ ]
-- What displays after pressing Tab on `en`? What would happen if you typed `te` at the prompt? [ ]
-- How does the prompt change after `enable`? How many commands start with "C" now? [ ]
-- What message is displayed after `configure`? How does the prompt change? [ ]
-- What does `show clock` display, and what year? [ ]
-- What do `clock`, `clock ?` and `clock set ?` display? [ ]
-- What was returned for `cl<Tab>`, `clock`, `clock set 25:00:00` and `clock set 15:00:00 32`? [ ]
+**What is the setting for bits per second?** [ ]
+
+**What is the prompt displayed on the screen?** The prompt displayed on the screen is Pres RETURN to get started! After pressing RETURN, we see terminal line 1 labeled S1>.
+
+**Which command begins with the letter "C"?** [ ]
+
+**Which commands are displayed?** Typing "?" I get a list of EXEC commands. Typing "t?" I get all commands starting with the letter "t". Typing "te?" I get a list of commands that contain "te".
+
+**What information is displayed for the enable command?** It states that "enable" turns on privileged commands.
+
+**What displays after pressing the Tab key?** The "enable" command is autofill.
+
+**What would happen if you typed `te<Tab>` at the prompt?** It would tab complete "telnet".
+
+**How does the prompt change?** It changes from S1> to S1#.
+
+**How many commands are displayed now that privileged EXEC mode is active?** Typing "?" we see about 20+ commands, typing "c?" I see about 5 commands.
+
+**What is the message that is displayed?** "Configuring from terminal, memory, or network [terminal]?" After pressing "ENTER," Enter configuration commands, one per line. End with CNTL/Z.
+
+**What information is displayed for `show clock`? What is the year that is displayed?** Time is displayed in UTC time. The year is 1993.
+
+**What information is displayed for `clock`?** % Incomplete command.
+
+**What information is displayed for `clock ?`** "clock"
+
+**What information is being requested by `clock set ?`** The time to be set is being requested.
+
+**What would have been displayed if only the clock set command had been entered, and no request for help was made by using the question mark?** % Incomplete command.
+
+### The error messages
+
+| Command | What was returned |
+|---|---|
+| `S1# cl<Tab>` | No command completion. No output. |
+| `S1# clock` | % Incomplete command. |
+| `S1# clock set 25:00:00` | % Invalid input detected at '^' marker. |
+| `S1# clock set 15:00:00 32` | % Invalid input detected at '^' marker. |
 
 ## Where I got stuck
 
@@ -88,9 +115,11 @@ S1# exit
 
 ## Proof it worked
 
-![show clock after setting the date](/assets/img/lab-01/show-clock.png)
+Packet Tracer marked the activity complete, time elapsed 1:10:50.
 
-![Check Results](/assets/img/lab-01/check-results.png)
+![Check Results, overall feedback](/assets/img/lab-01/check-results-feedback.png)
+
+![Check Results, assessment items](/assets/img/lab-01/check-results-items.png)
 
 ## What I'd tell someone doing this next
 
