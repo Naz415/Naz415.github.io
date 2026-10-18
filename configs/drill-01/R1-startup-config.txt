@@ -1,0 +1,34 @@
+Using 638 bytes
+!
+version 16.9
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1-LAB1
+!
+enable secret 5 $1$mERr$...s..................
+!
+ip cef
+no ipv6 cef
+!
+interface GigabitEthernet0/0/0
+ description #Link to S1.#
+ ip address 10.10.20.1 255.255.255.0
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+!
+ip classless
+!
+!
+line con 0
+ password cisco
+ login
+!
+line vty 0 4
+ password cisco
+ login
+!
+end

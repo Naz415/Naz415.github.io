@@ -8,3 +8,4 @@ minima:
 header_pages:
   - about.md
   - labs.md
+  - cheatsheet.md
