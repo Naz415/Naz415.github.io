@@ -45,7 +45,7 @@ spanning-tree mode pvst
 !
 !
 interface GigabitEthernet0/0
- description #Link to Room-146 Switch#
+ description Link to Room-145
  ip address 10.10.10.1 255.255.255.0
  duplex auto
  speed auto
@@ -53,7 +53,7 @@ interface GigabitEthernet0/0
  ipv6 address 2001:DB8:ACAD:100::1/64
 !
 interface GigabitEthernet0/1
- description #Link to Room-145 switch.#
+ description Link to Room-146
  ip address 10.10.11.1 255.255.255.0
  duplex auto
  speed auto
@@ -61,9 +61,11 @@ interface GigabitEthernet0/1
  ipv6 address 2001:DB8:ACAD:200::1/64
 !
 interface Vlan1
+ description Link to Floor14 G0/1
  no ip address
  shutdown
 !
+ip default-gateway 10.10.11.1
 ip classless
 !
 ip flow-export version 9

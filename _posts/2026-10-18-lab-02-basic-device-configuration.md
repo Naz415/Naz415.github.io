@@ -32,17 +32,17 @@ My completed table:
 | Room-145 | VLAN 1 | 10.10.10.100/24 | 10.10.10.1/24 |
 | Room-146 | VLAN 1 | 10.10.11.100/24 | 10.10.11.1/24 |
 | Manager-A | NIC | 10.10.10.101/24 | 10.10.10.1/24 |
-| Manager-A | NIC | 2001:DB8:ACAD:100::50/64 | 2001:DB8:ACAD:100::1/64 |
+| Manager-A | NIC | 2001:DB8:ACAD:100::50/64 | FE80::2 |
 | Reception-A | NIC | 10.10.10.102/24 | 10.10.10.1/24 |
-| Reception-A | NIC | 2001:DB8:ACAD:100::60/64 | 2001:DB8:ACAD:100::1/64 |
+| Reception-A | NIC | 2001:DB8:ACAD:100::60/64 | FE80::2 |
 | Manager-B | NIC | 10.10.11.101/24 | 10.10.11.1/24 |
-| Manager-B | NIC | 2001:DB8:ACAD:200::50/64 | 2001:DB8:ACAD:200::1/64 |
+| Manager-B | NIC | 2001:DB8:ACAD:200::50/64 | FE80::3 |
 | Reception-B | NIC | 10.10.11.102/24 | 10.10.11.1/24 |
-| Reception-B | NIC | 2001:DB8:ACAD:200::60/64 | 2001:DB8:ACAD:200::1/64 |
+| Reception-B | NIC | 2001:DB8:ACAD:200::60/64 | FE80::3 |
 
 ## What I typed, and why
 
-These are the commands that ended up in the saved configs, cleaned up and in order. The full log, every typo included, is in [command-log.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/command-log.txt).
+These are the commands that ended up in the saved configs, cleaned up and in order, including the fixes from my second pass. The full log, every typo included, is in [command-log.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/command-log.txt).
 
 On the router:
 
@@ -62,13 +62,13 @@ service password-encryption
 ipv6 unicast-routing
 ipv6 route ::/0 vlan 1 fe80::3
 interface g0/0
- description #Link to Room-146 Switch#
+ description Link to Room-145
  ip address 10.10.10.1 255.255.255.0
  ipv6 address 2001:db8:acad:100::1/64
  ipv6 address fe80::2 link-local
  no shutdown
 interface g0/1
- description #Link to Room-145 switch.#
+ description Link to Room-146
  ip address 10.10.11.1 255.255.255.0
  ipv6 address 2001:db8:acad:200::1/64
  ipv6 address fe80::3 link-local
@@ -93,12 +93,12 @@ line vty 0 15
  login
 service password-encryption
 interface vlan 1
- description #Link to Floor14 G0/0.#
+ description Link to Floor14 G0/1
  ip address 10.10.11.100 255.255.255.0
- ipv6 address 2001:DB8:ACAD:100::1/64
+ ipv6 address 2001:DB8:ACAD:200::100/64
  no shutdown
 exit
-ip default-gateway 10.10.10.1
+ip default-gateway 10.10.11.1
 do copy running-config startup-config
 ```
 
@@ -107,6 +107,17 @@ On each PC: Desktop > IP Configuration, static IPv4 and IPv6, with the IPv6 gate
 The saved configs: [Floor14-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/Floor14-startup-config.txt) and [Room-146-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/Room-146-startup-config.txt).
 
 [One short paragraph: which of these you did from memory, which one you had to look up, and why `ipv6 unicast-routing` matters for the PCs on one LAN reaching the other.]
+
+## Second pass (Oct 19)
+
+Check Results was already 134/134, but going back over the configs turned up four things the grader didn't check:
+
+- Room-146's default gateway was 10.10.10.1, the router's address on the other LAN. Changed to 10.10.11.1.
+- Room-146's VLAN 1 IPv6 address was 2001:DB8:ACAD:100::1, which is Floor14's G0/0 address. Changed to 2001:DB8:ACAD:200::100/64.
+- The router's two interface descriptions were swapped, and Room-146's pointed at G0/0 instead of G0/1.
+- My addressing table listed the PCs' IPv6 gateways as the global ::1 addresses. The PCs actually use the router's link-local addresses, FE80::2 and FE80::3.
+
+[One or two sentences: why none of these broke the score, and what they would have broken on a real network.]
 
 ## Where I got stuck
 

@@ -95,11 +95,11 @@ interface GigabitEthernet1/1/3
 interface GigabitEthernet1/1/4
 !
 interface Vlan1
- description #Link to Floor14 G0/0.#
+ description Link to Floor14 G0/1
  ip address 10.10.11.100 255.255.255.0
- ipv6 address 2001:DB8:ACAD:100::1/64
+ ipv6 address 2001:DB8:ACAD:200::100/64
 !
-ip default-gateway 10.10.10.1
+ip default-gateway 10.10.11.1
 ip classless
 !
 ip flow-export version 9
