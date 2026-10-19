@@ -66,7 +66,7 @@ My answers, as I wrote them down during the lab.
 
 **What is the range of values shown for the vty lines?** The range for vty lines is 0-4 and 5-15.
 
-**Which command will display the current contents of non-volatile random-access memory (NVRAM)?** The show running-config command
+**Which command will display the current contents of non-volatile random-access memory (NVRAM)?** The show startup-config command
 
 **Why does the switch respond with "startup-config is not present"?** There is nothing saved to the nvram memory.
 
@@ -84,7 +84,7 @@ My answers, as I wrote them down during the lab.
 
 **What is the shortest, abbreviated version of the copy running-config startup-config command?** Write memory
 
-**Examine the startup configuration file. Which command will display the contents of NVRAM?** show running-config
+**Examine the startup configuration file. Which command will display the contents of NVRAM?** show startup-config
 
 **Are all the changes that were entered recorded in the file?** Yes, all changes made show here.
 
