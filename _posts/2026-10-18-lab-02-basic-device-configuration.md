@@ -29,15 +29,15 @@ My completed table:
 | Floor14 | G0/1 | 10.10.11.1/24 | N/A |
 | Floor14 | G0/1 | 2001:DB8:ACAD:200::1/64 | N/A |
 | Floor14 | G0/1 | FE80::3 | N/A |
-| Room-145 | VLAN 1 | 10.10.10.100/24 | 10.10.10.1/24 |
-| Room-146 | VLAN 1 | 10.10.11.100/24 | 10.10.11.1/24 |
-| Manager-A | NIC | 10.10.10.101/24 | 10.10.10.1/24 |
+| Room-145 | VLAN 1 | 10.10.10.100/24 | 10.10.10.1 |
+| Room-146 | VLAN 1 | 10.10.11.100/24 | 10.10.11.1 |
+| Manager-A | NIC | 10.10.10.101/24 | 10.10.10.1 |
 | Manager-A | NIC | 2001:DB8:ACAD:100::50/64 | FE80::2 |
-| Reception-A | NIC | 10.10.10.102/24 | 10.10.10.1/24 |
+| Reception-A | NIC | 10.10.10.102/24 | 10.10.10.1 |
 | Reception-A | NIC | 2001:DB8:ACAD:100::60/64 | FE80::2 |
-| Manager-B | NIC | 10.10.11.101/24 | 10.10.11.1/24 |
+| Manager-B | NIC | 10.10.11.101/24 | 10.10.11.1 |
 | Manager-B | NIC | 2001:DB8:ACAD:200::50/64 | FE80::3 |
-| Reception-B | NIC | 10.10.11.102/24 | 10.10.11.1/24 |
+| Reception-B | NIC | 10.10.11.102/24 | 10.10.11.1 |
 | Reception-B | NIC | 2001:DB8:ACAD:200::60/64 | FE80::3 |
 
 ## What I typed, and why

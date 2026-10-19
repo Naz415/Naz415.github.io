@@ -218,3 +218,14 @@ Oct 19 00:06:00 | Room-146     Room-146(config-if)#ipv6 address 2001:DB8:ACAD:20
 Oct 19 00:06:00 | Room-146     Room-146(config-if)#description Link to Floor14 G0/1
 Oct 19 00:06:00 | Room-146     Room-146(config-if)#end
 Oct 19 00:06:01 | Room-146     Room-146#copy running-config startup-config
+Oct 19 00:14:19 | Floor14      Floor14>enable class   -> enable
+Oct 19 00:14:24 | Floor14      Floor14>enable
+Oct 19 00:14:31 | Floor14      Floor14#configure terminal
+Oct 19 00:14:31 | Floor14      Floor14(config)#no ip default-gateway
+Oct 19 00:14:31 | Floor14      Floor14(config)#interface vlan 1   -> interface Vlan1
+Oct 19 00:14:31 | Floor14      Floor14(config-if)#no description
+Oct 19 00:14:31 | Floor14      Floor14(config-if)#exit
+Oct 19 00:14:31 | Floor14      Floor14(config)#no ipv6 route ::/0 vlan 1 fe80::3   -> no ipv6 route :: 0
+Oct 19 00:15:12 | Floor14      Floor14(config)#end
+Oct 19 00:15:28 | Floor14      Floor14#show running-config | include route|gateway
+Oct 19 00:15:39 | Floor14      Floor14#copy running-config startup-config

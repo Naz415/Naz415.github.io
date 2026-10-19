@@ -61,11 +61,9 @@ interface GigabitEthernet0/1
  ipv6 address 2001:DB8:ACAD:200::1/64
 !
 interface Vlan1
- description Link to Floor14 G0/1
  no ip address
  shutdown
 !
-ip default-gateway 10.10.11.1
 ip classless
 !
 ip flow-export version 9
