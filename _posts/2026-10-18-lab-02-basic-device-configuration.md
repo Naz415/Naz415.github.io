@@ -3,7 +3,6 @@ layout: post
 title: "Lab 2: Basic Device Configuration (Packet Tracer)"
 tags: [module-11, packet-tracer, cisco-ios, ipv6]
 ---
-<!-- Naz: the device names, addressing table, commands and screenshots come from your saved lab (Documents\IT533 Labs\Lab 2 ...\Lab 2-Packet Tracer - Basic Device Configuration.pka) and your Word write-up, worked Oct 18. Your name is blacked out of the screenshots. Replace every line in [brackets] with your own words. Delete this comment when you're done. -->
 
 **Module:** IT533 Module 11, Cisco IOS basics
 **Tools:** Cisco Packet Tracer
@@ -13,7 +12,7 @@ tags: [module-11, packet-tracer, cisco-ios, ipv6]
 
 ## What the lab asked for
 
-[Two or three sentences in your own words. One router joining two LANs. Configure the router and Room-146 (Room-145 is locked), finish the PCs' IPv4 and IPv6 settings, fill in the addressing table, then get every device pinging every other device over IPv4 and IPv6.]
+One router joining two LANs. Configure the router and the second switch (the first switch is locked), finish the PCs' IPv4 and IPv6 settings, complete the addressing table, then get every device pinging every other device over IPv4 and IPv6. The requirements: name the devices, `cisco` on all lines, `class` as the encrypted enable password, encrypt plaintext passwords, a banner, IPv4 and IPv6 addressing, interface descriptions, save, then verify and troubleshoot.
 
 The lab hands out one of three name and address sets at random. Mine was Floor14 / Room-145 / Room-146 on 10.10.10.0/24 and 10.10.11.0/24.
 
@@ -40,7 +39,7 @@ My completed table:
 | Reception-B | NIC | 10.10.11.102/24 | 10.10.11.1 |
 | Reception-B | NIC | 2001:DB8:ACAD:200::60/64 | FE80::3 |
 
-## What I typed, and why
+## What I typed
 
 These are the commands that ended up in the saved configs, cleaned up and in order, including the fixes from my second pass. The full log, every typo included, is in [command-log.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/command-log.txt).
 
@@ -106,8 +105,6 @@ On each PC: Desktop > IP Configuration, static IPv4 and IPv6, with the IPv6 gate
 
 The saved configs: [Floor14-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/Floor14-startup-config.txt) and [Room-146-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-02/Room-146-startup-config.txt).
 
-[One short paragraph: which of these you did from memory, which one you had to look up, and why `ipv6 unicast-routing` matters for the PCs on one LAN reaching the other.]
-
 ## Second pass (Oct 19)
 
 Check Results was already 134/134, but going back over the configs turned up four things the grader didn't check:
@@ -117,26 +114,8 @@ Check Results was already 134/134, but going back over the configs turned up fou
 - The router's two interface descriptions were swapped, and Room-146's pointed at G0/0 instead of G0/1.
 - My addressing table listed the PCs' IPv6 gateways as the global ::1 addresses. The PCs actually use the router's link-local addresses, FE80::2 and FE80::3.
 
-[One or two sentences: why none of these broke the score, and what they would have broken on a real network.]
-
-## Where I got stuck
-
-[Be specific. A few moments the log shows, if they were part of it:]
-
-- [`hostname Floor 14` with a space, typed at `Router>` and `Router#` before I got it into config mode. What does each prompt allow?]
-- [`motd banner` instead of `banner motd`, three times, before it took.]
-- [`int g0/0/0` didn't work on the 1941. Its ports are `g0/0` and `g0/1`. Where did the extra `/0` come from?]
-- [`ip default-gateway 10.10.10.1 255.255.255.0`: the gateway doesn't take a mask.]
-- [`copy running-config startup-config` at `(config)#` failed, `do copy ...` worked. Same for `show` commands: `run` isn't an IOS command, `do` is.]
-- [`ipv6 route ::/0 vlan 1 fe80::3` went on the router, pointing at its own shut-down Vlan1 and its own G0/1 link-local. Does a router need that line?]
-- [Reception-B started out with the wrong address. That was the troubleshooting item. How did I spot it?]
-
 ## Proof it worked
 
 ![Check Results, assessment items: 134/134](/assets/img/lab-02/check-results-items.png)
 
 ![Check Results, overall feedback](/assets/img/lab-02/check-results-feedback.png)
-
-## What I'd tell someone doing this next
-
-[Three bullets, max.]

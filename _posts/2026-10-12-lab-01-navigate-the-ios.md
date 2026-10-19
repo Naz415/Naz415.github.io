@@ -3,7 +3,6 @@ layout: post
 title: "Lab 1: Navigate the IOS (Packet Tracer)"
 tags: [module-11, packet-tracer, cisco-ios]
 ---
-<!-- Naz: the setup and the command log come straight from your saved Packet Tracer file (Lab 1-Packet Tracer - Navigate the IOS (1).pka, worked Oct 12). The answers and screenshots come from Module11_Lab_Complete.docx; your name is blacked out of the screenshots. Replace every line in [brackets] with your own words. Delete this comment when you're done. -->
 
 **Module:** IT533 Module 11, Cisco IOS basics
 **Tools:** Cisco Packet Tracer
@@ -12,7 +11,7 @@ tags: [module-11, packet-tracer, cisco-ios]
 
 ## What the lab asked for
 
-[Two or three sentences in your own words. Console into a switch from a PC, find your way around with `?` and Tab, move between user EXEC, privileged EXEC and global config, then use the `clock` command to practice reading IOS help and error messages.]
+Three parts: connect PC1 to S1 with a console cable and explore the IOS help, move between user EXEC, privileged EXEC and global configuration mode, then use the `clock` command to practice command syntax and error messages.
 
 ## The setup
 
@@ -24,7 +23,7 @@ No IP addressing in this one. It's one cable:
 
 Then PC1 > Desktop > Terminal, keep the default port settings, and press Enter at "Press RETURN to get started!"
 
-## What I typed, and why
+## What I typed
 
 This is my actual command log from the lab, in order:
 
@@ -60,8 +59,6 @@ S1# clock set 15:00:00 32
 S1# exit
 ```
 
-[One short paragraph: what `?` shows at `S1>` versus `S1#`, why `config` worked as well as `configure`, and what you noticed about the prompt in each mode.]
-
 ## The lab's questions
 
 My answers, as I wrote them down during the lab.
@@ -69,8 +66,6 @@ My answers, as I wrote them down during the lab.
 **What is the setting for bits per second?** 9600
 
 **What is the prompt displayed on the screen?** The prompt displayed on the screen is Press RETURN to get started! After pressing RETURN, we see terminal line 1 labeled S1>.
-
-**Which command begins with the letter "C"?** [ ]
 
 **Which commands are displayed?** Typing "?" I get a list of EXEC commands. Typing "t?" I get all commands starting with the letter "t". Typing "te?" I get a list of commands that start with "te".
 
@@ -105,14 +100,6 @@ My answers, as I wrote them down during the lab.
 | `S1# clock set 25:00:00` | % Invalid input detected at '^' marker. |
 | `S1# clock set 15:00:00 32` | % Invalid input detected at '^' marker. |
 
-## Where I got stuck
-
-[Be specific. A few moments the log shows, if they were part of it:]
-
-- [`clock set 15:00:00 01/31/2035` was rejected. What format did IOS want instead, and how did `?` show you?]
-- [At 11:47 I was back at `S1>` and had to `enable` again, about 17 minutes after my last command. What logged me out?]
-- [`cl` plus Tab didn't finish the word, so I typed `ock` on its own line. Why didn't Tab complete `cl`, and why didn't `ock` work?]
-
 ## Proof it worked
 
 Packet Tracer marked the activity complete, time elapsed 1:10:50.
@@ -120,7 +107,3 @@ Packet Tracer marked the activity complete, time elapsed 1:10:50.
 ![Check Results, overall feedback](/assets/img/lab-01/check-results-feedback.png)
 
 ![Check Results, assessment items](/assets/img/lab-01/check-results-items.png)
-
-## What I'd tell someone doing this next
-
-[Three bullets, max.]
