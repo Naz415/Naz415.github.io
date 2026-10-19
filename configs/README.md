@@ -7,3 +7,4 @@ Passwords in these files are the Packet Tracer textbook values (`class`, `cisco`
 | Folder | Lab | Devices |
 |---|---|---|
 | drill-01 | Cisco drill 1: modes, passwords, banner, interfaces, saving | S1 (2960), R1 (ISR4221) |
+| lab-02 | Lab 2: Basic Device Configuration (plus the full command log) | Floor14 (1941), Room-146 (3650) |

@@ -1,0 +1,177 @@
+# Lab 2 command log (Packet Tracer COMMAND_LOGS, Oct 18 2026)
+# time | device | prompt + what I typed   -> what IOS read it as
+13:09:49 | Floor14      Router>enable
+13:09:52 | Floor14      Router#config t   -> configure terminal
+13:10:03 | Floor14      Router(config)#hostname Floor 14   -> hostname Floor
+13:10:13 | Floor14      Router(config)#end
+13:10:17 | Floor14      Router#exit
+13:10:25 | Floor14      Router>hostname Floor 14   -> hostname
+13:10:31 | Floor14      Router>enable
+13:10:39 | Floor14      Router#hostname Floor 14   -> hostname
+13:10:51 | Floor14      Router#end
+13:12:14 | Floor14      Router#exit
+13:12:20 | Floor14      Router>hostname Floor 14   -> hostname
+13:12:28 | Floor14      Router>hostname Floor14   -> hostname
+13:12:31 | Floor14      Router>enable
+13:12:33 | Floor14      Router#hostname Floor14   -> hostname
+13:12:47 | Floor14      Router#config t   -> configure terminal
+13:12:56 | Floor14      Router(config)#hostname floor14
+13:13:02 | Floor14      floor14(config)#hostname Floor14
+13:13:42 | Room-146     Switch>enable
+13:13:47 | Room-146     Switch#config t   -> configure terminal
+13:13:55 | Room-146     Switch(config)#hostname Room-146
+13:17:52 | Room-146     Room-146(config)#enable secret class
+13:18:01 | Room-146     Room-146(config)#login
+13:18:05 | Room-146     Room-146(config)#end
+13:18:20 | Room-146     Room-146#end
+13:27:44 | Room-146     Room-146>enable secret class   -> enable
+13:27:51 | Room-146     Room-146>enable
+13:28:33 | Room-146     Room-146#exit
+13:32:18 | Room-146     Room-146>enable
+13:32:40 | Room-146     Room-146#banner motd #Authorized access only. Violators will be prosecuted.#   -> banner
+13:32:50 | Room-146     Room-146#config t   -> configure terminal
+13:33:19 | Room-146     Room-146##banner motd #Authorized access only. Violators will be prosecuted.#   -> #banner
+13:33:22 | Room-146     Room-146#exit
+13:33:27 | Room-146     Room-146>#banner motd #Authorized access only. Violators will be prosecuted.#   -> #banner
+13:33:36 | Room-146     Room-146>banner motd #Authorized access only. Violators will be prosecuted.#   -> banner
+13:33:47 | Room-146     Room-146>banner motd #Authorized access only. Violators will be prosecuted.#   -> banner
+13:33:51 | Room-146     Room-146>enable
+13:33:57 | Room-146     Room-146#banner motd #Authorized access only. Violators will be prosecuted.#   -> banner
+13:34:07 | Room-146     Room-146#config t   -> configure terminal
+13:34:10 | Room-146     Room-146(config)#banner motd #Authorized access only. Violators will be prosecuted.#
+13:35:34 | Room-146     Room-146(config)#line console 0
+13:35:49 | Room-146     Room-146(config-line)#password cisco
+13:35:53 | Room-146     Room-146(config-line)#login
+13:35:57 | Room-146     Room-146(config-line)#end
+13:36:26 | Room-146     Room-146#config t   -> configure terminal
+13:36:31 | Room-146     Room-146(config)#line vty 0 15
+13:36:36 | Room-146     Room-146(config-line)#password cisco
+13:36:43 | Room-146     Room-146(config-line)#login
+13:36:44 | Room-146     Room-146(config-line)#end
+13:37:09 | Room-146     Room-146#service password-encryption   -> service
+13:37:13 | Room-146     Room-146#config t   -> configure terminal
+13:37:32 | Room-146     Room-146(config)#service password-encryption
+13:38:57 | Floor14      Floor14>enable
+13:39:08 | Floor14      Floor14#enable secret class   -> enable
+13:39:10 | Floor14      Floor14#config t   -> configure terminal
+13:39:15 | Floor14      Floor14(config)#enable secret class
+13:39:41 | Floor14      Floor14(config)#motd banner #Authorized access only. Violators will be prosecuted.#
+13:39:50 | Floor14      Floor14(config)#end
+13:39:58 | Floor14      Floor14##Authorized access only. Violators will be prosecuted.#   -> #Authorized
+13:40:00 | Floor14      Floor14#config t   -> configure terminal
+13:40:03 | Floor14      Floor14(config)#motd banner #Authorized access only. Violators will be prosecuted.#
+13:40:08 | Floor14      Floor14(config)#exit
+13:40:11 | Floor14      Floor14#end
+13:41:16 | Floor14      Floor14#exit
+13:41:21 | Floor14      Floor14>enable
+13:41:29 | Floor14      Floor14##Authorized access only. Violators will be prosecuted.#   -> #Authorized
+13:41:42 | Floor14      Floor14##Authorized access only. Violators will be prosecuted.#   -> #Authorized
+13:41:52 | Floor14      Floor14#motd banner #Authorized access only. Violators will be prosecuted.#   -> motd
+13:41:55 | Floor14      Floor14#config t   -> configure terminal
+13:41:59 | Floor14      Floor14(config)#motd banner #Authorized access only. Violators will be prosecuted.#
+13:43:08 | Floor14      Floor14(config)#banner motd #Authorized access only. Violators will be prosecuted.#
+13:43:11 | Floor14      Floor14(config)#end
+13:43:22 | Floor14      Floor14#config t   -> configure terminal
+13:43:36 | Floor14      Floor14(config)#line console 0
+13:43:42 | Floor14      Floor14(config-line)#password cisco
+13:43:45 | Floor14      Floor14(config-line)#login
+13:43:48 | Floor14      Floor14(config-line)#end
+13:43:51 | Floor14      Floor14#config t   -> configure terminal
+13:43:56 | Floor14      Floor14(config)#line vty 0 15
+13:44:02 | Floor14      Floor14(config-line)#password cisco
+13:44:04 | Floor14      Floor14(config-line)#login
+13:44:05 | Floor14      Floor14(config-line)#end
+13:45:24 | Floor14      Floor14#servicepassword-encryption
+13:46:35 | Floor14      Floor14#service password-encryption   -> service
+13:46:39 | Floor14      Floor14#config t   -> configure terminal
+13:46:47 | Floor14      Floor14(config)#service password-encryption
+13:46:53 | Floor14      Floor14(config)#end
+13:48:11 | Room-146     Room-146>enable
+13:48:19 | Room-146     Room-146#config t   -> configure terminal
+13:48:23 | Room-146     Room-146(config)#int vlan 1   -> interface Vlan1
+13:49:17 | Room-146     Room-146(config-if)#ip address 10.10.11.100 255.255.255.0
+13:49:24 | Room-146     Room-146(config-if)#no shutdown
+13:49:42 | Room-146     Room-146(config-if)#exit
+13:50:16 | Room-146     Room-146(config)#ip default-gateway 10.10.10.1 255.255.255.0   -> ip default-gateway 10.10.10.1
+13:50:21 | Room-146     Room-146(config)#ip default-gateway 10.10.10.1
+13:54:42 | Floor14      Floor14#config t   -> configure terminal
+13:55:11 | Floor14      Floor14(config)#int g0/0/0   -> interface GigabitEthernet0/0/0
+13:55:22 | Floor14      Floor14(config)#ip address 10.10.10.1   -> ip
+13:55:40 | Floor14      Floor14(config)#ip address 10.10.10.1 255.255.2550   -> ip
+13:56:00 | Floor14      Floor14(config)#int gigabitethernet 0/0/0   -> interface GigabitEthernet0/0/0
+13:56:38 | Floor14      Floor14(config)#int GigabitEthernet0/0/0   -> interface GigabitEthernet0/0/0
+13:56:42 | Floor14      Floor14(config)#exit
+13:56:47 | Floor14      Floor14#enable
+13:56:54 | Floor14      Floor14#config t   -> configure terminal
+13:57:00 | Floor14      Floor14(config)#int GigabitEthernet0/0/0   -> interface GigabitEthernet0/0/0
+13:57:10 | Floor14      Floor14(config)#int G0/0/0   -> interface GigabitEthernet0/0/0
+13:57:38 | Floor14      Floor14(config)#int G0/0   -> interface GigabitEthernet0/0
+13:58:10 | Floor14      Floor14(config-if)#ip address 10.10.10.1 255.255.255.0
+13:58:17 | Floor14      Floor14(config-if)#no shut   -> no shutdown
+13:59:11 | Floor14      Floor14(config-if)#descriptio #Link to Room-146 Switch#   -> description #Link to Room-146 Switch#
+13:59:19 | Floor14      Floor14(config-if)#end
+13:59:25 | Floor14      Floor14#config t   -> configure terminal
+13:59:31 | Floor14      Floor14(config)#int g0/1   -> interface GigabitEthernet0/1
+13:59:47 | Floor14      Floor14(config-if)#ip address 10.10.11.1 255.255.255.0
+13:59:52 | Floor14      Floor14(config-if)#no shut   -> no shutdown
+14:00:26 | Floor14      Floor14(config-if)#description #Link to Room-145 switch.#
+14:00:32 | Floor14      Floor14(config-if)#end
+14:06:20 | Room-146     Room-146>enable 
+14:06:26 | Room-146     Room-146#config t   -> configure terminal
+14:06:32 | Room-146     Room-146(config)#int vlan1   -> interface Vlan1
+14:07:00 | Room-146     Room-146(config-if)#description #Link to Floor14 G0/0.#
+14:07:03 | Room-146     Room-146(config-if)#end
+14:11:07 | Room-146     Room-146#config t   -> configure terminal
+14:11:56 | Room-146     Room-146(config)#int fe0/0   -> interface
+14:12:03 | Room-146     Room-146(config)#int f0/0   -> interface FastEthernet0/0
+14:12:17 | Room-146     Room-146(config)#int FastEthernet0/0   -> interface FastEthernet0/0
+17:17:10 | Room-146     Room-146>enable
+17:17:17 | Room-146     Room-146#config t   -> configure terminal
+17:17:28 | Room-146     Room-146(config)#int vlan1   -> interface Vlan1
+17:18:07 | Room-146     Room-146(config-if)#ipv6 address 2001:DB8:ACAD:100::1/64   -> ipv6 address 2001:DB8:ACAD:100::1 64
+17:18:10 | Room-146     Room-146(config-if)#no shut   -> no shutdown
+17:18:12 | Room-146     Room-146(config-if)#end
+19:17:44 | Floor14      Floor14>enable
+19:17:59 | Floor14      Floor14#write memeory   -> write
+19:18:02 | Floor14      Floor14#write memory
+19:18:20 | Floor14      Floor14#dopy running-config startup-config   -> dopy
+19:18:29 | Floor14      Floor14#copy running-config startup-config
+19:18:45 | Room-146     Room-146>enable
+19:18:53 | Room-146     Room-146#config t   -> configure terminal
+19:19:04 | Room-146     Room-146(config)#copy running-config startup-config
+19:19:11 | Room-146     Room-146(config)#do copy running-config startup-config
+19:20:03 | Floor14      Floor14#config t   -> configure terminal
+19:20:09 | Floor14      Floor14(config)#int vlan 1   -> interface Vlan1
+19:20:32 | Floor14      Floor14(config-if)#ipv6 unicast-routing
+19:20:39 | Floor14      Floor14(config)#ipv6 route ::/0 vlan 1 fe80::3   -> ipv6 route :: 0 Vlan 1 fe80::3
+19:20:44 | Floor14      Floor14(config)#write memory
+19:20:58 | Floor14      Floor14(config)#do copy running-config startup-config
+19:21:57 | Floor14      Floor14(config)#show ipv6 interface brief
+19:22:04 | Floor14      Floor14(config)#run show ipv6 interface brief
+19:22:09 | Floor14      Floor14(config)#end
+19:22:26 | Floor14      Floor14#run show ipv6 interface brief   -> run
+19:22:33 | Floor14      Floor14#show ipv6 interface brief
+19:26:34 | Room-146     Room-146(config)#int vlan 1   -> interface Vlan1
+19:27:32 | Room-146     Room-146(config-if)#ipv6 address 2001:DB8:ACAD:100::1/64   -> ipv6 address 2001:DB8:ACAD:100::1 64
+19:27:40 | Room-146     Room-146(config-if)#no shut   -> no shutdown
+19:27:43 | Room-146     Room-146(config-if)#end
+19:29:47 | Floor14      Floor14#config t   -> configure terminal
+19:30:31 | Floor14      Floor14(config)#ipv6 unicast-routing
+19:30:51 | Floor14      Floor14(config)#ip address 10.10.10.1 255.255.255.0   -> ip
+19:31:07 | Floor14      Floor14(config)#ipv6 address 2001:db8:acad:100::1/64   -> ipv6
+19:31:14 | Floor14      Floor14(config)#ipv6 address 2001:db8:acad:100::1/64   -> ipv6
+19:31:50 | Floor14      Floor14(config)#ipv6 unicast-routing
+19:31:59 | Floor14      Floor14(config)#int g0/0   -> interface GigabitEthernet0/0
+19:32:06 | Floor14      Floor14(config-if)#ip address 10.10.10.1 255.255.255.0
+19:32:10 | Floor14      Floor14(config-if)#ipv6 address 2001:db8:acad:100::1/64   -> ipv6 address 2001:db8:acad:100::1 64
+19:32:22 | Floor14      Floor14(config-if)#ipv6 address fe80::2 link-local
+19:32:28 | Floor14      Floor14(config-if)#no shut   -> no shutdown
+19:32:40 | Floor14      Floor14(config-if)#int g0/1   -> interface GigabitEthernet0/1
+19:33:05 | Floor14      Floor14(config-if)#ip address 10.10.11.1 255.255.255.0
+19:33:13 | Floor14      Floor14(config-if)#pv6 address 2001:db8:acad:200::1/64
+19:33:20 | Floor14      Floor14(config-if)#ipv6 address 2001:db8:acad:200::1/64   -> ipv6 address 2001:db8:acad:200::1 64
+19:33:30 | Floor14      Floor14(config-if)#ipv6 address fe80::3 link-local
+19:33:41 | Floor14      Floor14(config-if)#no shut   -> no shutdown
+19:33:44 | Floor14      Floor14(config-if)#end
+19:34:03 | Floor14      Floor14#copy running-config startup-config
+19:41:48 | Floor14      Floor14#ping 2001:db8:acad:200::1

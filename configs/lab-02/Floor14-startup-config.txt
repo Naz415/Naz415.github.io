@@ -1,0 +1,96 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname Floor14
+!
+!
+!
+enable secret 5 $1$mERr$...
+!
+!
+!
+!
+!
+!
+ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524PMLM
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description #Link to Room-146 Switch#
+ ip address 10.10.10.1 255.255.255.0
+ duplex auto
+ speed auto
+ ipv6 address FE80::2 link-local
+ ipv6 address 2001:DB8:ACAD:100::1/64
+!
+interface GigabitEthernet0/1
+ description #Link to Room-145 switch.#
+ ip address 10.10.11.1 255.255.255.0
+ duplex auto
+ speed auto
+ ipv6 address FE80::3 link-local
+ ipv6 address 2001:DB8:ACAD:200::1/64
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+ipv6 route ::/0 Vlan1 FE80::3
+!
+!
+no cdp run
+!
+banner motd #Authorized access only. Violators will be prosecuted.#
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16
+ login
+line vty 5 15
+ password 7 0822455D0A16
+ login
+!
+!
+!
+end
