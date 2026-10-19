@@ -229,3 +229,7 @@ Oct 19 00:14:31 | Floor14      Floor14(config)#no ipv6 route ::/0 vlan 1 fe80::3
 Oct 19 00:15:12 | Floor14      Floor14(config)#end
 Oct 19 00:15:28 | Floor14      Floor14#show running-config | include route|gateway
 Oct 19 00:15:39 | Floor14      Floor14#copy running-config startup-config
+Oct 19 00:24:54 | Floor14      Floor14>enable
+Oct 19 00:24:59 | Floor14      Floor14#config t   -> configure terminal
+Oct 19 00:25:10 | Floor14      Floor14(config)#no ipv6 route ::/0 FE80::3   -> no ipv6 route :: 0 FE80::3
+Oct 19 00:25:12 | Floor14      Floor14(config)#do show running-config | include ipv6 route

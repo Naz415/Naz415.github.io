@@ -1,0 +1,37 @@
+# Lab 3 command log (Packet Tracer COMMAND_LOGS, Oct 19 2026)
+# date time | device | prompt + what I typed   -> what IOS read it as
+Oct 19 01:26:23 | S1         Switch>enable 
+Oct 19 01:26:26 | S1         Switch#config t   -> configure terminal
+Oct 19 01:26:31 | S1         Switch(config)#hostname S1
+Oct 19 01:26:40 | S1         S1(config)#linecondole 0
+Oct 19 01:26:46 | S1         S1(config)#line console 0
+Oct 19 01:26:56 | S1         S1(config-line)#password letmein
+Oct 19 01:26:59 | S1         S1(config-line)#login
+Oct 19 01:27:02 | S1         S1(config-line)#exit
+Oct 19 01:27:23 | S1         S1(config)#enable password c1$c0
+Oct 19 01:27:40 | S1         S1(config)#enable secret itsasecret
+Oct 19 01:27:59 | S1         S1(config)#service password-encryption
+Oct 19 01:28:10 | S1         S1(config)#banner motd "This is a secure system. Authorized Access Only!"
+Oct 19 01:28:27 | S1         S1(config)#exit
+Oct 19 01:28:31 | S1         S1#copy running-config startup-config
+Oct 19 01:29:03 | S2         Switch>enable 
+Oct 19 01:29:14 | S2         Switch#config t   -> configure terminal
+Oct 19 01:29:27 | S2         Switch(config)#line console 0
+Oct 19 01:29:37 | S2         Switch(config-line)#password letmein
+Oct 19 01:30:00 | S2         Switch(config-line)#enable password c1$c0
+Oct 19 01:30:14 | S2         Switch(config)#password letmein
+Oct 19 01:30:21 | S2         Switch(config)#login
+Oct 19 01:30:30 | S2         Switch(config)#line console 0
+Oct 19 01:30:38 | S2         Switch(config-line)#password letmein
+Oct 19 01:30:41 | S2         Switch(config-line)#login
+Oct 19 01:30:49 | S2         Switch(config-line)#enable password c1$c0
+Oct 19 01:31:22 | S2         Switch(config)#enable secret itsasecret
+Oct 19 01:31:36 | S2         Switch(config)#service password-encryption
+Oct 19 01:31:58 | S2         Switch#config t   -> configure terminal
+Oct 19 01:32:10 | S2         Switch(config)#banner motd "This is a secure system. Authorized Access Only!"
+Oct 19 01:32:18 | S2         Switch(config)#exit
+Oct 19 01:32:26 | S2         Switch#config t   -> configure terminal
+Oct 19 01:32:33 | S2         Switch(config)#gostname S2
+Oct 19 01:32:40 | S2         Switch(config)#hostname S2
+Oct 19 01:32:50 | S2         S2(config)#exit
+Oct 19 01:33:04 | S2         S2#copy running-config startup-config
