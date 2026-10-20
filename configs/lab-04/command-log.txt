@@ -1,0 +1,78 @@
+# Lab 4 command log (Packet Tracer COMMAND_LOGS, Oct 19 2026)
+# date time | device | prompt + what I typed   -> what IOS read it as
+Oct 19 15:10:45 | R1         Router>enable
+Oct 19 15:19:25 | R1         Router#show running config   -> show running-config
+Oct 19 15:19:38 | R1         Router#show running-config
+Oct 19 15:22:47 | R1         Router#show startup-config
+Oct 19 15:23:55 | R1         Router#config t   -> configure terminal
+Oct 19 15:24:01 | R1         Router(config)#hostname R1
+Oct 19 15:24:57 | R1         R1(config)#banner motd #"Unauthorized access is strictly prohibited."#
+Oct 19 15:25:11 | R1         R1(config)#lin consoile 0   -> line
+Oct 19 15:25:23 | R1         R1(config)#line console 0
+Oct 19 15:26:29 | R1         R1(config-line)#enable password letmein
+Oct 19 15:26:32 | R1         R1(config)#login
+Oct 19 15:30:24 | R1         R1(config)#enable secret cisco
+Oct 19 15:30:28 | R1         R1(config)#login
+Oct 19 15:30:43 | R1         R1(config)#exit
+Oct 19 15:30:46 | R1         R1#enable
+Oct 19 15:30:52 | R1         R1#exit
+Oct 19 15:30:59 | R1         R1>enable
+Oct 19 15:31:11 | R1         R1#config t   -> configure terminal
+Oct 19 15:31:20 | R1         R1(config)#line console 0
+Oct 19 15:31:51 | R1         R1(config-line)#password letmein
+Oct 19 15:31:54 | R1         R1(config-line)#login
+Oct 19 15:32:18 | R1         R1(config-line)#line vty 0 4
+Oct 19 15:32:39 | R1         R1(config-line)#password cisco
+Oct 19 15:32:43 | R1         R1(config-line)#login
+Oct 19 15:32:58 | R1         R1(config-line)#service password-encryption
+Oct 19 15:33:05 | R1         R1(config)#exit
+Oct 19 15:33:09 | R1         R1#exit
+Oct 19 15:33:15 | R1         R1>enable
+Oct 19 15:33:24 | R1         R1#config t   -> configure terminal
+Oct 19 15:33:51 | R1         R1(config)#enable secret itsasecret
+Oct 19 15:33:53 | R1         R1(config)#login
+Oct 19 15:33:56 | R1         R1(config)#exit
+Oct 19 15:33:58 | R1         R1#exit
+Oct 19 15:34:04 | R1         R1>enable
+Oct 19 15:34:52 | R1         R1#config t   -> configure terminal
+Oct 19 15:35:09 | R1         R1(config)#enable secret itsasecret
+Oct 19 15:36:09 | R1         R1(config)#login
+Oct 19 15:36:14 | R1         R1(config)#enable secret
+Oct 19 15:36:21 | R1         R1(config)#enable secret itsasecret
+Oct 19 15:36:23 | R1         R1(config)#login
+Oct 19 15:36:26 | R1         R1(config)#exit
+Oct 19 15:36:41 | R1         R1#enable secret itsasecret   -> enable
+Oct 19 15:38:03 | R1         R1#config t   -> configure terminal
+Oct 19 15:38:07 | R1         R1(config)#enable secret itsasecret
+Oct 19 15:38:08 | R1         R1(config)#exit
+Oct 19 15:39:11 | R1         R1#show rnning-config | include neable   -> show
+Oct 19 15:39:16 | R1         R1#show rnning-config | include enable   -> show
+Oct 19 15:39:23 | R1         R1#show running-config | include enable
+Oct 19 15:40:03 | R1         R1#copy running-config startup-config
+Oct 19 15:40:35 | R1         R1#config t   -> configure terminal
+Oct 19 15:40:39 | R1         R1(config)#line console 0
+Oct 19 15:40:42 | R1         R1(config-line)#enable secret itsasecret
+Oct 19 15:40:46 | R1         R1(config)#exit
+Oct 19 15:40:50 | R1         R1#config t   -> configure terminal
+Oct 19 15:41:49 | R1         R1(config)#show running-config | include enable
+Oct 19 15:41:53 | R1         R1(config)#exit
+Oct 19 15:41:58 | R1         R1#show running-config | include enable
+Oct 19 15:42:22 | R1         R1#exit
+Oct 19 15:42:34 | R1         R1>enable
+Oct 19 15:43:00 | R1         R1#enable password cisco   -> enable
+Oct 19 15:43:07 | R1         R1#config t   -> configure terminal
+Oct 19 15:43:13 | R1         R1(config)#enable password cisco
+Oct 19 15:43:30 | R1         R1(config)#line console 0
+Oct 19 15:44:41 | R1         R1(config-line)#enable secret itsasecret
+Oct 19 15:44:43 | R1         R1(config)#login
+Oct 19 15:44:46 | R1         R1(config)#exit
+Oct 19 15:44:53 | R1         R1#config t   -> configure terminal
+Oct 19 15:45:01 | R1         R1(config)#enable passwrod cisco   -> enable
+Oct 19 15:45:14 | R1         R1(config)#enable password cisco
+Oct 19 15:45:15 | R1         R1(config)#end
+Oct 19 16:07:09 | R1         R1>enable
+Oct 19 16:07:31 | R1         R1#config t   -> configure terminal
+Oct 19 16:07:45 | R1         R1(config)#show running-config
+Oct 19 16:07:49 | R1         R1(config)#end
+Oct 19 16:07:56 | R1         R1#show running-config
+Oct 19 16:08:58 | R1         R1#show flash   -> show flash:
