@@ -38,7 +38,7 @@ copy running-config startup-config
 show flash
 ```
 
-The final config: [R1-running-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-04/R1-running-config.txt).
+The saved config: [R1-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-04/R1-startup-config.txt).
 
 ## The lab's questions
 
@@ -64,7 +64,7 @@ My answers, as I wrote them down during the lab.
 
 **What command did you enter to save the configuration to NVRAM?** Copy running-config startup-config
 
-**What is the shortest, unambiguous version of this command?** Write memory
+**What is the shortest, unambiguous version of this command?** Copy r s
 
 **How many files are currently stored in flash?** There are 3 files stored in flash.
 

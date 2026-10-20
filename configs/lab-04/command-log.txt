@@ -76,3 +76,8 @@ Oct 19 16:07:45 | R1         R1(config)#show running-config
 Oct 19 16:07:49 | R1         R1(config)#end
 Oct 19 16:07:56 | R1         R1#show running-config
 Oct 19 16:08:58 | R1         R1#show flash   -> show flash:
+Oct 19 21:34:49 | R1         R1>enable
+Oct 19 21:35:03 | R1         R1#config t   -> configure terminal
+Oct 19 21:35:22 | R1         R1(config)#copy running-config startup-config   -> 
+Oct 19 21:35:27 | R1         R1(config)#exit
+Oct 19 21:35:31 | R1         R1#copy running-config startup-config

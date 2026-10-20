@@ -9,4 +9,4 @@ Passwords in these files are the Packet Tracer textbook values (`class`, `cisco`
 | drill-01 | Cisco drill 1: modes, passwords, banner, interfaces, saving | S1 (2960), R1 (ISR4221) |
 | lab-02 | Lab 2: Basic Device Configuration (plus the full command log) | Floor14 (1941), Room-146 (3650) |
 | lab-03 | Lab 3: Configure Initial Switch Settings (plus the full command log) | S1, S2 (2960) |
-| lab-04 | Lab 4: Configure Initial Router Settings (running config, since the last save came before the final password fix; plus the full command log) | R1 (1941) |
+| lab-04 | Lab 4: Configure Initial Router Settings (plus the full command log) | R1 (1941) |
