@@ -7,7 +7,8 @@ tags: [module-11, packet-tracer, cisco-ios]
 **Module:** IT533 Module 11, Cisco IOS basics
 **Tools:** Cisco Packet Tracer
 **Devices:** R1 (1941 router), PCA (console connection)
-**Time:** about an hour (15:10 to 16:08 in the command log)
+**Time:** 46 minutes (Packet Tracer timer)
+**Score:** 80/80, 10 of 10 items
 
 ## What the lab asked for
 
@@ -38,10 +39,6 @@ show flash
 ```
 
 The final config: [R1-running-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-04/R1-running-config.txt).
-
-## Where I got stuck
-
-[In your own words. Your command log shows the story: what happened when `enable password letmein` was typed at the `(config-line)#` prompt, what `enable secret itsasecret` did when typed at `R1#`, and why Check Results marked Enable Password wrong until 15:45.]
 
 ## The lab's questions
 
@@ -77,6 +74,6 @@ My answers, as I wrote them down during the lab.
 
 ## Proof it worked
 
-![Check Results, assessment items](/assets/img/lab-04/check-results-items.png)
+![Check Results, assessment items: 80/80](/assets/img/lab-04/check-results-items.png)
 
 ![Check Results, overall feedback](/assets/img/lab-04/check-results-feedback.png)
