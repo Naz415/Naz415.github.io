@@ -1,0 +1,98 @@
+# Lab 8 command log (Packet Tracer COMMAND_LOGS, Oct 22 2026)
+# date time | device | prompt + what I typed   -> what IOS read it as
+Oct 22 21:22:14 | R1         R1>enable
+Oct 22 21:22:37 | R1         R1#show int   -> show interfaces
+Oct 22 21:31:59 | R1         R1#show int s/0/0/0   -> show interfaces
+Oct 22 21:32:13 | R1         R1#show int s0/0/0   -> show interfaces Serial0/0/0
+Oct 22 21:33:20 | R1         R1#show int g0/0/0   -> show interfaces GigabitEthernet0/0/0
+Oct 22 21:33:38 | R1         R1#show int G0/0/0   -> show interfaces GigabitEthernet0/0/0
+Oct 22 21:33:51 | R1         R1#show int g0/0   -> show interfaces GigabitEthernet0/0
+Oct 22 21:35:02 | R1         R1#show int brief s0/0/0   -> show interfaces
+Oct 22 21:35:18 | R1         R1#show int brief   -> show interfaces
+Oct 22 21:35:58 | R1         R1#show ?
+Oct 22 21:36:10 | R1         R1#show int brief ?
+Oct 22 21:36:16 | R1         R1#show int?
+Oct 22 21:36:23 | R1         R1#show int   -> show interfaces
+Oct 22 21:37:28 | R1         R1#show int g0/0   -> show interfaces GigabitEthernet0/0
+Oct 22 21:41:56 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 21:43:26 | R2         R2>enable
+Oct 22 21:43:33 | R2         R2#config t   -> configure terminal
+Oct 22 21:43:50 | R2         R2(config)#show ip int brief
+Oct 22 21:44:01 | R2         R2(config)#exit
+Oct 22 21:44:13 | R2         R2#show ip int brief   -> show ip interface brief
+Oct 22 21:46:30 | R2         R2#show ip int brief   -> show ip interface brief
+Oct 22 21:46:50 | R2         R2#show ip int brief   -> show ip interface brief
+Oct 22 21:47:03 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 21:50:20 | R1         R1#config t   -> configure terminal
+Oct 22 21:50:28 | R1         R1(config)#int sg0/0   -> interface
+Oct 22 21:50:32 | R1         R1(config)#int g0/0   -> interface GigabitEthernet0/0
+Oct 22 21:50:50 | R1         R1(config-if)#ipaddress 192.168.10.1 255.255.255.0
+Oct 22 21:50:54 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 21:51:19 | R1         R1(config-if)#description LAN connection to S1
+Oct 22 21:51:44 | R1         R1(config-if)#end
+Oct 22 21:51:59 | R1         R1#ping 192.168.10.10
+Oct 22 21:57:00 | R1         R1#config t   -> configure terminal
+Oct 22 21:57:09 | R1         R1(config)#int g0/1   -> interface GigabitEthernet0/1
+Oct 22 21:57:20 | R1         R1(config-if)#ip address 192.168.11.1 255.255.255.0
+Oct 22 21:57:22 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 21:57:40 | R1         R1(config-if)#exit
+Oct 22 21:59:36 | R1         R1(config)#int g0/1   -> interface GigabitEthernet0/1
+Oct 22 21:59:50 | R1         R1(config-if)#description LAN connection to S2
+Oct 22 22:00:25 | R1         R1(config-if)#exit
+Oct 22 22:00:32 | R1         R1(config)#int s0/0/0   -> interface Serial0/0/0
+Oct 22 22:01:00 | R1         R1(config-if)#ip adrress 209.165.200.225 255.255.255.252   -> ip
+Oct 22 22:01:08 | R1         R1(config-if)#ip address 209.165.200.225 255.255.255.252
+Oct 22 22:01:14 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 22:02:36 | R1         R1(config-if)#description Serial (DCE) connection to R2
+Oct 22 22:02:45 | R1         R1(config-if)#exit
+Oct 22 22:03:32 | R2         R2#config t   -> configure terminal
+Oct 22 22:03:45 | R2         R2(config)#int g0/0   -> interface GigabitEthernet0/0
+Oct 22 22:04:14 | R2         R2(config-if)#ip address 10.1.1.1 255.255.255.0
+Oct 22 22:04:19 | R2         R2(config-if)#no shut   -> no shutdown
+Oct 22 22:04:52 | R2         R2(config-if)#description LAN connection to S3
+Oct 22 22:04:56 | R2         R2(config-if)#exit
+Oct 22 22:05:05 | R2         R2(config)#int g0/1   -> interface GigabitEthernet0/1
+Oct 22 22:05:30 | R2         R2(config-if)#ip address 10.1.2.1 255.255.255.0
+Oct 22 22:05:40 | R2         R2(config-if)#no shut   -> no shutdown
+Oct 22 22:06:06 | R2         R2(config-if)#description LAN connection to S4
+Oct 22 22:06:10 | R2         R2(config-if)#exit
+Oct 22 22:06:23 | R2         R2(config)#end
+Oct 22 22:06:41 | R2         R2#ping 192.168.10.10
+Oct 22 22:07:04 | R2         R2#config t   -> configure terminal
+Oct 22 22:07:17 | R2         R2(config)#int s0/0/0   -> interface Serial0/0/0
+Oct 22 22:07:45 | R2         R2(config-if)#ip address 209.165.200.226 255.255.255.252
+Oct 22 22:07:53 | R2         R2(config-if)#no shut   -> no shutdown
+Oct 22 22:07:57 | R2         R2(config-if)#end
+Oct 22 22:08:27 | R1         R1(config)#show ip int brief
+Oct 22 22:08:31 | R1         R1(config)#exit
+Oct 22 22:08:39 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 22:09:19 | R2         R2#show ip int brief   -> show ip interface brief
+Oct 22 22:09:55 | R1         R1#config t   -> configure terminal
+Oct 22 22:10:02 | R1         R1(config)#int s0/0/0   -> interface Serial0/0/0
+Oct 22 22:10:18 | R1         R1(config-if)#ip address 192.168.10.1 255.255.255.0
+Oct 22 22:10:26 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 22:10:42 | R1         R1(config-if)#end
+Oct 22 22:10:45 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 22:11:24 | R1         R1#config t   -> configure terminal
+Oct 22 22:11:43 | R1         R1(config)#int s0/0/0   -> interface Serial0/0/0
+Oct 22 22:12:10 | R1         R1(config-if)#ip address 209.165.200.226 255.255.255.252
+Oct 22 22:12:22 | R1         R1(config-if)#exit
+Oct 22 22:12:31 | R1         R1(config)#no shutexit   -> no
+Oct 22 22:12:36 | R1         R1(config)#no shutexitend   -> no
+Oct 22 22:12:39 | R1         R1(config)#end
+Oct 22 22:12:46 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 22:12:54 | R1         R1#config t   -> configure terminal
+Oct 22 22:13:10 | R1         R1(config)#int g0/0   -> interface GigabitEthernet0/0
+Oct 22 22:13:22 | R1         R1(config-if)#ip address 192.168.10.1 255.255.255.0
+Oct 22 22:13:25 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 22:13:29 | R1         R1(config-if)#end
+Oct 22 22:13:33 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 22:13:57 | R1         R1#config t   -> configure terminal
+Oct 22 22:14:38 | R1         R1(config)#description LAN connection to S1
+Oct 22 22:14:53 | R1         R1(config)#int g0/0   -> interface GigabitEthernet0/0
+Oct 22 22:14:56 | R1         R1(config-if)#description LAN connection to S1
+Oct 22 22:14:59 | R1         R1(config-if)#exit
+Oct 22 22:15:02 | R1         R1(config)#end
+Oct 22 22:15:19 | R1         R1#do copy run start   -> do
+Oct 22 22:15:25 | R1         R1#copy run start   -> copy running-config startup-config
+Oct 22 22:15:34 | R2         R2#copy run start   -> copy running-config startup-config

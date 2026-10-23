@@ -1,0 +1,186 @@
+# Lab 6 command log (Packet Tracer COMMAND_LOGS, Oct 22 2026)
+# date time | device | prompt + what I typed   -> what IOS read it as
+Oct 22 10:52:23 | R1         Router>enable
+Oct 22 10:52:30 | R1         Router#config t   -> configure terminal
+Oct 22 10:53:23 | R1         Router(config)#hostname R1
+Oct 22 10:53:56 | R1         R1(config)#ip address 192.168.0.1 255.255.255.0   -> ip
+Oct 22 10:54:51 | R1         R1(config)#line console 0
+Oct 22 10:54:58 | R1         R1(config-line)#password cisco
+Oct 22 10:54:59 | R1         R1(config-line)#login
+Oct 22 10:55:23 | R1         R1(config-line)#linve vty 0 4
+Oct 22 10:55:28 | R1         R1(config-line)#line vty 0 4
+Oct 22 10:55:42 | R1         R1(config-line)#password class
+Oct 22 10:55:46 | R1         R1(config-line)#login
+Oct 22 10:55:58 | R1         R1(config-line)#exit
+Oct 22 10:56:31 | R1         R1(config)#enable secret class
+Oct 22 10:56:35 | R1         R1(config)#login
+Oct 22 10:56:51 | R1         R1(config)#service password-encryption
+Oct 22 10:57:16 | R1         R1(config)#banner motd #"Authorized personnel ONLY!"#
+Oct 22 10:57:33 | R1         R1(config)#exit
+Oct 22 10:57:45 | R1         R1#ip address 192.168.0.1 255.255.255.0   -> ip
+Oct 22 10:57:49 | R1         R1#config t   -> configure terminal
+Oct 22 10:58:15 | R1         R1(config)#int g0/0/0   -> interface GigabitEthernet0/0/0
+Oct 22 10:58:25 | R1         R1(config-if)#ip address 192.168.0.1 255.255.255.0
+Oct 22 10:58:36 | R1         R1(config-if)#copy run start
+Oct 22 10:58:42 | R1         R1(config-if)#exit
+Oct 22 10:58:46 | R1         R1(config)#copy run start
+Oct 22 10:58:49 | R1         R1(config)#do copy run start
+Oct 22 11:00:40 | R1         R1(config)#int g0/0/1   -> interface GigabitEthernet0/0/1
+Oct 22 11:00:56 | R1         R1(config-if)#ip address 192.168.1.1 255.255.255.0
+Oct 22 11:00:59 | R1         R1(config-if)#exit
+Oct 22 11:01:02 | R1         R1(config)#do copy run start
+Oct 22 13:30:10 | R1         R1>enable
+Oct 22 13:30:21 | R1         R1#config t   -> configure terminal
+Oct 22 13:30:25 | R1         R1(config)#int vlan 1   -> interface Vlan1
+Oct 22 13:30:41 | R1         R1(config-if)#exit
+Oct 22 13:30:42 | R1         R1(config)#end
+Oct 22 13:30:45 | R1         R1#exit
+Oct 22 13:31:23 | S1         Switch>enable
+Oct 22 13:31:30 | S1         Switch#config t   -> configure terminal
+Oct 22 13:31:38 | S1         Switch(config)#hostname S1
+Oct 22 13:32:07 | S1         S1(config)#password class
+Oct 22 13:32:12 | S1         S1(config)#enable password class
+Oct 22 13:32:15 | S1         S1(config)#login
+Oct 22 13:32:25 | S1         S1(config)#line console 0
+Oct 22 13:32:41 | S1         S1(config-line)#password cisco
+Oct 22 13:32:45 | S1         S1(config-line)#login
+Oct 22 13:33:23 | S1         S1(config-line)#line vty 0 24
+Oct 22 13:33:29 | S1         S1(config-line)#exit
+Oct 22 13:33:34 | S1         S1(config)#line vty 0 24   -> line vty 0
+Oct 22 13:33:41 | S1         S1(config)#line vty 0 15
+Oct 22 13:33:56 | S1         S1(config-line)#password class
+Oct 22 13:33:59 | S1         S1(config-line)#login
+Oct 22 13:34:01 | S1         S1(config-line)#exit
+Oct 22 13:34:17 | S1         S1(config)#banner motd #"Authorized Personnel ONLY!"#
+Oct 22 13:34:39 | S1         S1(config)#service password-encryption
+Oct 22 13:34:53 | S1         S1(config)#int vlan 1   -> interface Vlan1
+Oct 22 13:35:11 | S1         S1(config-if)#ip address 192.168.1.2 255.255.255.0
+Oct 22 13:35:23 | S1         S1(config-if)#ip default-gateway 192.168.1.1
+Oct 22 13:35:42 | S1         S1(config)#do copy run start
+Oct 22 13:39:54 | R1         R1>show version
+Oct 22 13:40:06 | S1         S1>show version
+Oct 22 13:48:41 | R1         R1>show ip route
+Oct 22 13:55:24 | R1         R1>enable
+Oct 22 13:55:31 | R1         R1#config t   -> configure terminal
+Oct 22 13:55:37 | R1         R1(config)#int vlan 1   -> interface Vlan1
+Oct 22 13:55:41 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 13:55:51 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 13:56:02 | R1         R1(config-if)#end
+Oct 22 13:56:34 | S1         S1>enable
+Oct 22 13:56:42 | S1         S1#config t   -> configure terminal
+Oct 22 13:56:47 | S1         S1(config)#int vlan 1   -> interface Vlan1
+Oct 22 13:56:50 | S1         S1(config-if)#no shut   -> no shutdown
+Oct 22 13:56:56 | S1         S1(config-if)#exit
+Oct 22 13:57:03 | S1         S1(config)#do copy run start
+Oct 22 13:57:10 | R1         R1#exut
+Oct 22 13:57:42 | S1         S1(config)#enable secret class
+Oct 22 13:57:52 | S1         S1(config)#enable secret cisco
+Oct 22 13:57:57 | S1         S1(config)#login
+Oct 22 13:58:37 | S1         S1(config)#do copy run start
+Oct 22 13:58:57 | S1         S1(config)#exit
+Oct 22 13:58:58 | S1         S1#e
+Oct 22 13:59:00 | S1         S1#end
+Oct 22 13:59:06 | R1         R1#exit
+Oct 22 13:59:12 | R1         R1>enable
+Oct 22 13:59:29 | R1         R1#config t   -> configure terminal
+Oct 22 13:59:38 | R1         R1(config)#int g0/0/0   -> interface GigabitEthernet0/0/0
+Oct 22 13:59:41 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 13:59:51 | R1         R1(config-if)#exit
+Oct 22 14:00:00 | R1         R1(config)#int g0/0/1   -> interface GigabitEthernet0/0/1
+Oct 22 14:00:03 | R1         R1(config-if)#no shut   -> no shutdown
+Oct 22 14:00:07 | R1         R1(config-if)#exit
+Oct 22 14:00:08 | R1         R1(config)#exit
+Oct 22 14:00:33 | R1         R1#config t   -> configure terminal
+Oct 22 14:00:46 | R1         R1(config)#line vty 0
+Oct 22 14:00:55 | R1         R1(config-line)#password cisco
+Oct 22 14:00:57 | R1         R1(config-line)#login
+Oct 22 14:00:59 | R1         R1(config-line)#exit
+Oct 22 14:01:05 | R1         R1(config)#do copy run start
+Oct 22 16:01:16 | S1         S1>enable
+Oct 22 16:01:19 | S1         S1>enable
+Oct 22 16:02:06 | R1         R1>enable
+Oct 22 16:02:20 | R1         R1#show ip route
+Oct 22 16:03:46 | R1         R1#show int g0/0/1   -> show interfaces GigabitEthernet0/0/1
+Oct 22 18:13:31 | R1         R1>enable
+Oct 22 18:13:42 | S1         S1>enable
+Oct 22 18:15:27 | R1         R1#show int g0/0/1   -> show interfaces GigabitEthernet0/0/1
+Oct 22 18:15:51 | R1         R1#show ip route
+Oct 22 18:19:27 | R1         R1#show ip int breif   -> show ip interface
+Oct 22 18:19:38 | R1         R1#show ip int brief   -> show ip interface brief
+Oct 22 18:19:53 | S1         S1#show ip int brief   -> show ip interface brief
+Oct 22 18:21:59 | S1         S1#enable secret class   -> enable
+Oct 22 18:22:07 | S1         S1#config t   -> configure terminal
+Oct 22 18:22:19 | S1         S1(config)#enable secret class
+Oct 22 18:22:24 | S1         S1(config)#enable secret cisco
+Oct 22 18:22:34 | S1         S1(config)#do copy runt start
+Oct 22 18:22:44 | S1         S1(config)#do copy run start
+Oct 22 18:23:16 | S1         S1(config)#line console 0
+Oct 22 18:23:26 | S1         S1(config-line)#enable secret cisco
+Oct 22 18:23:38 | S1         S1(config)#login
+Oct 22 18:23:56 | S1         S1(config)#do copy run start
+Oct 22 18:24:01 | S1         S1(config)#exit
+Oct 22 18:24:06 | S1         S1#exit
+Oct 22 18:24:12 | S1         S1>enable
+Oct 22 18:24:22 | S1         S1>enable
+Oct 22 19:01:04 | R1         R1>enable
+Oct 22 19:01:10 | R1         R1#config t   -> configure terminal
+Oct 22 19:01:31 | R1         R1(config)#line vty 0
+Oct 22 19:01:44 | R1         R1(config-line)#password cisco
+Oct 22 19:01:47 | R1         R1(config-line)#login
+Oct 22 19:01:49 | R1         R1(config-line)#exit
+Oct 22 19:02:01 | R1         R1(config)#do copy run start
+Oct 22 19:02:21 | R1         R1(config)#line vty 0 23   -> line vty 0
+Oct 22 19:02:29 | R1         R1(config)#line vty 0 4
+Oct 22 19:02:39 | R1         R1(config-line)#password cisco
+Oct 22 19:02:45 | R1         R1(config-line)#login
+Oct 22 19:02:48 | R1         R1(config-line)#exit
+Oct 22 19:03:04 | R1         R1(config)#line vty 5 10
+Oct 22 19:03:12 | R1         R1(config-line)#password cisco
+Oct 22 19:03:15 | R1         R1(config-line)#enable
+Oct 22 19:03:21 | R1         R1(config-line)#login
+Oct 22 19:03:24 | R1         R1(config-line)#exit
+Oct 22 19:03:47 | R1         R1(config)#line vty 11 15
+Oct 22 19:03:55 | R1         R1(config-line)#password cisco
+Oct 22 19:03:57 | R1         R1(config-line)#login
+Oct 22 19:04:01 | R1         R1(config-line)#exit
+Oct 22 19:04:37 | R1         R1(config)#line vty 16 20   -> line vty
+Oct 22 19:05:19 | R1         R1(config)#line vty 0 24   -> line vty 0
+Oct 22 19:05:23 | R1         R1(config)#line vty 0 23   -> line vty 0
+Oct 22 19:05:41 | R1         R1(config)#line vty 0 4
+Oct 22 19:05:46 | R1         R1(config-line)#password cisco
+Oct 22 19:05:48 | R1         R1(config-line)#login
+Oct 22 19:05:51 | R1         R1(config-line)#exit
+Oct 22 19:05:56 | R1         R1(config)#do copy runt start
+Oct 22 19:06:01 | R1         R1(config)#do copy run start
+Oct 22 19:06:03 | R1         R1(config)#exit
+Oct 22 19:06:25 | S1         S1>enable
+Oct 22 19:06:36 | S1         S1#config t   -> configure terminal
+Oct 22 19:06:49 | S1         S1(config)#line console 0
+Oct 22 19:07:01 | S1         S1(config-line)#enable secret class
+Oct 22 19:07:31 | S1         S1(config)#password cisco
+Oct 22 19:07:46 | S1         S1(config)#line console 0
+Oct 22 19:07:55 | S1         S1(config-line)#password cisco
+Oct 22 19:07:59 | S1         S1(config-line)#login
+Oct 22 19:08:14 | S1         S1(config-line)#enable secret class
+Oct 22 19:08:38 | S1         S1(config)#line vty 0 15
+Oct 22 19:08:53 | S1         S1(config-line)#password cisco
+Oct 22 19:08:56 | S1         S1(config-line)#login
+Oct 22 19:08:58 | S1         S1(config-line)#exit
+Oct 22 19:09:21 | S1         S1(config)#do copy run start
+Oct 22 19:09:48 | R1         R1#config t   -> configure terminal
+Oct 22 19:10:01 | R1         R1(config)#int s0/0/0   -> interface Serial0/0/0
+Oct 22 19:10:05 | R1         R1(config)#int s0/0   -> interface Serial0/0
+Oct 22 19:10:07 | R1         R1(config)#int s0   -> interface Serial0
+Oct 22 19:10:59 | R1         R1(config)#int s0/1/0   -> interface Serial0/1/0
+Oct 22 19:11:22 | R1         R1(config)#int serial 0/1/0   -> interface Serial0/1/0
+Oct 22 19:11:41 | R1         R1(config)#int Serial0/1/0   -> interface Serial0/1/0
+Oct 22 19:11:51 | S1         S1(config)#int Serial0/1/0   -> interface
+Oct 22 19:12:01 | S1         S1(config)#int S0/1/0   -> interface
+Oct 22 19:12:49 | R1         R1(config)#ip domain-name academy.net
+Oct 22 19:13:13 | R1         R1(config)#crypto key generate rsa
+Oct 22 19:14:04 | R1         R1(config)#user name SSHuser secret cisco   -> username name
+Oct 22 19:14:12 | R1         R1(config)#username SSHuser secret cisco
+Oct 22 19:14:23 | R1         R1(config)#line vty 0 4
+Oct 22 19:14:29 | R1         R1(config-line)#login local
+Oct 22 19:14:47 | R1         R1(config-line)#transport input ssh
+Oct 22 19:15:27 | PCA        C:\>ssh -I SSHuser 192.168.1.1

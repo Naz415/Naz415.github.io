@@ -10,3 +10,10 @@ Passwords in these files are the Packet Tracer textbook values (`class`, `cisco`
 | lab-02 | Lab 2: Basic Device Configuration (plus the full command log) | Floor14 (1941), Room-146 (3650) |
 | lab-03 | Lab 3: Configure Initial Switch Settings (plus the full command log) | S1, S2 (2960) |
 | lab-04 | Lab 4: Configure Initial Router Settings (plus the full command log) | R1 (1941) |
+| lab-05 | Lab 5: Basic Switch and End Device Configuration (plus the full command log) | Room-145, Room-146 (2960) |
+| lab-06 | Lab 6: Build a Switch and Router Network (plus the full command log) | R1 (ISR4321), S1 (2960) |
+| lab-08 | Lab 8: Connect a Router to a LAN (plus the full command log) | R1, R2 (1941) |
+
+Lab 7 was a cabling lab with no commands, so it has no folder here; its cable list is in the post.
+
+Two files are running configs instead of startup configs because my last changes came after my last save: lab-05 Room-145 (password encryption and the banner) and lab-06 R1 (the SSH settings).
