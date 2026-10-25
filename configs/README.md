@@ -18,4 +18,4 @@ Passwords in these files are the Packet Tracer textbook values (`class`, `cisco`
 
 Lab 7 was a cabling lab with no commands, so it has no folder here; its cable list is in the post.
 
-Three files are running configs instead of startup configs because my last changes came after my last save: lab-05 Room-145 (password encryption and the banner), lab-06 R1 (the SSH settings) and lab-10 S1 (the enable secret fix).
+Two files are running configs instead of startup configs because my last changes came after my last save: lab-05 Room-145 (password encryption and the banner) and lab-06 R1 (the SSH settings).

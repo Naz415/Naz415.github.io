@@ -50,9 +50,9 @@ Switch2> show ip interface brief
 
 My answers, as I wrote them down during the lab.
 
-**Which management ports are available?** Console and serial ports.
+**Which management ports are available?** Console and Aux ports.
 
-**Which LAN and WAN interfaces are available on the East router and how many are there?** Ge0/0 and Ge0/1.
+**Which LAN and WAN interfaces are available on the East router and how many are there?** Ge0/0, Ge0/1, Serial 0, Serial 1
 
 **How many physical interfaces are listed?** 4 physical interfaces 2 serail and 2 Ethernet
 
@@ -68,7 +68,7 @@ My answers, as I wrote them down during the lab.
 
 **How many hosts can you connect to the router using this module?** Provides four switching ports.
 
-**Which module can you insert to provide a Gigabit optical connection to Switch3?** The PT-SWITCH-NM-1FGE-SM Module provides one Gigabit-Ethernet interface for use with single mode fiber media. Ideal for a wide range of LAN applications, the Gigabit Ethernet network modules support many internetworking features and standards. Single port network modules offer autosensing 10/100BaseTX or 1000BaseFX Ethernet.
+**Which module can you insert to provide a Gigabit optical connection to Switch3?** The PT-SWITCH-NM-1FGE Module provides one Gigabit-Ethernet interface for use with multimode mode fiber media. Ideal for a wide range of LAN applications, the Gigabit Ethernet network modules support many internetworking features and standards. Single port network modules offer autosensing 10/100BaseTX or 1000BaseFX Ethernet.
 
 **Into which slot was it inserted?** GigabitEthernet5/1 unassigned YES manual down/down
 

@@ -136,3 +136,9 @@ Oct 25 15:41:09 | S2         S2(config)#no enable password
 Oct 25 15:41:17 | S2         S2(config)#enable secret class
 Oct 25 15:41:20 | S2         S2(config)#end
 Oct 25 15:41:28 | S2         S2#copy run start   -> copy running-config startup-config
+Oct 25 16:01:57 | S1         S1>config t   -> config
+Oct 25 16:02:07 | S1         S1>enable
+Oct 25 16:02:11 | S1         S1#config t   -> configure terminal
+Oct 25 16:02:16 | S1         S1(config)#copy run start
+Oct 25 16:02:18 | S1         S1(config)#exit
+Oct 25 16:02:22 | S1         S1#copy run start   -> copy running-config startup-config

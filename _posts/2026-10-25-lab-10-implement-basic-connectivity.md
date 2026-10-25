@@ -41,6 +41,7 @@ line vty 0 15
 no enable password
 enable secret class
 end
+copy running-config startup-config
 ```
 
 S2:
@@ -78,7 +79,7 @@ The PCs:
 | PC1 | 192.168.1.1 | 255.255.255.0 |
 | PC2 | 192.168.1.2 | 255.255.255.0 |
 
-The configs: [S1-running-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-10/S1-running-config.txt) and [S2-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-10/S2-startup-config.txt).
+The configs: [S1-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-10/S1-startup-config.txt) and [S2-startup-config.txt](https://github.com/Naz415/Naz415.github.io/blob/main/configs/lab-10/S2-startup-config.txt).
 
 ## The lab's questions
 
@@ -86,11 +87,15 @@ My answers, as I wrote them down during the lab.
 
 **How can you verify that both passwords were configured correctly?** With command show running-config.
 
-**Which command do you issue to accomplish this step?** banner motd
+**Which command do you issue to accomplish this step?** copy run start
 
 **Were you successful? Explain.** No, the ping test failed. Reviewing the running config on both switches there is no interface assigned with that IP address.
 
+**If this is the case, why would we configure it with an IP address?** We give the switch an IP address, so it knows which device it needs to communicate with. The switches have ARP tables that translate IP to MAC addresses.
+
 **Why do you enter the no shutdown command?** The command enables the interface from a down state to an up state.
+
+**Which command is used to save the configuration file in RAM to NVRAM?** copy run start
 
 ## Proof it worked
 
