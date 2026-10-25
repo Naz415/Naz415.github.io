@@ -91,7 +91,7 @@ My answers, as I wrote them down during the lab.
 
 **Were you successful? Explain.** No, the ping test failed. Reviewing the running config on both switches there is no interface assigned with that IP address.
 
-**If this is the case, why would we configure it with an IP address?** We give the switch an IP address on VLAN 1 to be able to ping or test connectivity and to be able to remote into the switch from any pc on the network. Applying the line vty 0 15 password allows for an SSH connection to the switch.
+**If this is the case, why would we configure it with an IP address?** We give the switch an IP address on VLAN 1 to be able to ping or test connectivity and to be able to remote into the switch from any pc on the network. Applying the line vty 0 15 password allows for an Telnet connection to the switch.
 
 **Why do you enter the no shutdown command?** The command enables the interface from a down state to an up state.
 
