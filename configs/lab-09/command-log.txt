@@ -1,0 +1,13 @@
+# Lab 9 command log (Packet Tracer COMMAND_LOGS, Oct 25 2026)
+# date time | device | prompt + what I typed   -> what IOS read it as
+Oct 25 14:06:22 | East       East>show ip int brief   -> show ip interface brief
+Oct 25 14:09:44 | East       East>show int ge0/0   -> show interfaces
+Oct 25 14:09:51 | East       East>show int Ge0/0   -> show interfaces
+Oct 25 14:10:06 | East       East>show int GigabitEthernet 0/0   -> show interfaces GigabitEthernet0/0
+Oct 25 14:11:33 | East       East>show int serial 0/0   -> show interfaces Serial0/0
+Oct 25 14:11:42 | East       East>show int serial 0/0/0   -> show interfaces Serial0/0/0
+Oct 25 14:34:45 | Switch2    Switch2>show int brief   -> show interfaces
+Oct 25 14:34:57 | Switch2    Switch2>show ip int brief   -> show ip interface brief
+Oct 25 14:36:01 | Switch2    Switch2>show ip int brief   -> show ip interface brief
+Oct 25 14:45:14 | Switch2    Switch2>show ip int brief   -> show ip interface brief
+Oct 25 14:48:45 | East       East>show ip int brief   -> show ip interface brief

@@ -1,0 +1,138 @@
+# Lab 10 command log (Packet Tracer COMMAND_LOGS, Oct 25 2026)
+# date time | device | prompt + what I typed   -> what IOS read it as
+Oct 25 14:56:40 | S1         Switch>enable
+Oct 25 14:56:45 | S1         Switch#config t   -> configure terminal
+Oct 25 14:57:07 | S1         Switch(config)#password cisco
+Oct 25 14:57:25 | S1         Switch(config)#enable password class
+Oct 25 14:57:40 | S1         Switch(config)#line consile 0   -> line
+Oct 25 14:57:46 | S1         Switch(config)#line console 0
+Oct 25 14:57:55 | S1         Switch(config-line)#password cisco
+Oct 25 14:57:57 | S1         Switch(config-line)#login
+Oct 25 14:58:01 | S1         Switch(config-line)#exit
+Oct 25 14:58:03 | S1         Switch(config)#end
+Oct 25 14:58:06 | S1         Switch#end
+Oct 25 14:59:34 | S1         Switch#exit
+Oct 25 14:59:42 | S1         Switch>eanble
+Oct 25 15:00:58 | S1         Switch>enable
+Oct 25 15:01:39 | S1         Switch#show int brief   -> show interfaces
+Oct 25 15:01:45 | S1         Switch#show ip int brief   -> show ip interface brief
+Oct 25 15:02:56 | S1         Switch#banner MOTD #"Authorized Personnel ONLY!"#   -> banner
+Oct 25 15:03:06 | S1         Switch#banner motd #"Authorized Personnel ONLY!"#   -> banner
+Oct 25 15:03:20 | S1         Switch#config t   -> configure terminal
+Oct 25 15:03:41 | S1         Switch(config)#banner mothd #"Authorized Personnel ONLY!"#   -> banner
+Oct 25 15:03:51 | S1         Switch(config)#banner motd #"Authorized Personnel ONLY!"#
+Oct 25 15:06:24 | S1         Switch(config)#exit
+Oct 25 15:06:30 | S1         Switch#show run config   -> show running-config
+Oct 25 15:06:41 | S1         Switch#show runnning-config   -> show
+Oct 25 15:06:44 | S1         Switch#config t   -> configure terminal
+Oct 25 15:06:49 | S1         Switch(config)#show run config
+Oct 25 15:07:17 | S1         Switch(config)#exit
+Oct 25 15:07:20 | S1         Switch#exit
+Oct 25 15:07:38 | S1         Switch>show running-config   -> show
+Oct 25 15:07:46 | S1         Switch>enable
+Oct 25 15:07:51 | S1         Switch#show running-config
+Oct 25 15:09:05 | S1         Switch#config t   -> configure terminal
+Oct 25 15:09:34 | S1         Switch(config)#banner motd #"Authorized access only. Violators will be prosecuted to the full extent of the law."#
+Oct 25 15:09:38 | S1         Switch(config)#exit
+Oct 25 15:09:53 | S1         Switch#show running-config
+Oct 25 15:10:53 | S1         Switch#config t   -> configure terminal
+Oct 25 15:11:02 | S1         Switch(config)#hostname s1
+Oct 25 15:11:09 | S1         s1(config)#copy run start
+Oct 25 15:11:19 | S1         s1(config)#do copy run start
+Oct 25 15:11:28 | S2         Switch>enable
+Oct 25 15:11:32 | S2         Switch#config t   -> configure terminal
+Oct 25 15:11:37 | S2         Switch(config)#hostname S2
+Oct 25 15:12:12 | S2         S2(config)#enable password class
+Oct 25 15:12:19 | S2         S2(config)#int line console 0   -> interface
+Oct 25 15:12:24 | S2         S2(config)#line console 0
+Oct 25 15:12:31 | S2         S2(config-line)#password cisco
+Oct 25 15:12:33 | S2         S2(config-line)#login
+Oct 25 15:12:36 | S2         S2(config-line)#exit
+Oct 25 15:13:04 | S2         S2(config)#banner motd #"Authorized access only. Violators will be prosecuted to the full extent of the law."#
+Oct 25 15:16:36 | S2         S2(config)#exit
+Oct 25 15:16:46 | S2         S2#show running-config
+Oct 25 15:20:59 | S1         s1(config)#int vlan 1   -> interface Vlan1
+Oct 25 15:21:14 | S1         s1(config-if)#ip address 192.168.1.253 255.255.255.0
+Oct 25 15:21:20 | S1         s1(config-if)#no shut   -> no shutdown
+Oct 25 15:21:27 | S1         s1(config-if)#exit
+Oct 25 15:22:22 | S2         S2#config t   -> configure terminal
+Oct 25 15:22:25 | S2         S2(config)#int vlan 1   -> interface Vlan1
+Oct 25 15:22:37 | S2         S2(config-if)#ip address 192.168.1.254 255.255.255.0
+Oct 25 15:22:39 | S2         S2(config-if)#no shut   -> no shutdown
+Oct 25 15:22:41 | S2         S2(config-if)#exit
+Oct 25 15:23:09 | S2         S2(config)#show ip int brief
+Oct 25 15:23:12 | S2         S2(config)#exit
+Oct 25 15:23:22 | S2         S2#show ip int brief   -> show ip interface brief
+Oct 25 15:23:59 | S2         S2#show running config   -> show running-config
+Oct 25 15:24:07 | S2         S2#show running-config
+Oct 25 15:24:37 | S1         s1(config)#show ip int brief
+Oct 25 15:24:39 | S1         s1(config)#exit
+Oct 25 15:24:46 | S1         s1#show ip int brief   -> show ip interface brief
+Oct 25 15:24:57 | S1         s1#show running-config
+Oct 25 15:25:13 | S1         s1#copu run start   -> copu
+Oct 25 15:25:17 | S1         s1#copy run start   -> copy running-config startup-config
+Oct 25 15:25:28 | S2         S2#copy run start   -> copy running-config startup-config
+Oct 25 15:27:52 | S1         s1#enable secret class   -> enable
+Oct 25 15:27:57 | S1         s1#config t   -> configure terminal
+Oct 25 15:28:08 | S1         s1(config)#enable secret class
+Oct 25 15:28:14 | S1         s1(config)#enable secret cisco
+Oct 25 15:28:36 | S1         s1(config)#service password-encryption
+Oct 25 15:28:41 | S1         s1(config)#exit
+Oct 25 15:28:54 | S2         S2#config t   -> configure terminal
+Oct 25 15:29:08 | S2         S2(config)#enable secret cisco
+Oct 25 15:29:12 | S2         S2(config)#login
+Oct 25 15:29:26 | S2         S2(config)#service password-encryption
+Oct 25 15:29:30 | S2         S2(config)#exit
+Oct 25 15:29:33 | S2         S2#exit
+Oct 25 15:29:42 | S2         S2>enable
+Oct 25 15:30:08 | S1         s1#config t   -> configure terminal
+Oct 25 15:30:13 | S1         s1(config)#hostname S1
+Oct 25 15:30:17 | S1         S1(config)#exit
+Oct 25 15:30:30 | S1         S1#enable secret cisco   -> enable
+Oct 25 15:30:36 | S1         S1#config t   -> configure terminal
+Oct 25 15:30:46 | S1         S1(config)#enable secret cisco
+Oct 25 15:31:13 | S1         S1(config)#line console 0
+Oct 25 15:31:20 | S1         S1(config-line)#enable secret class
+Oct 25 15:31:22 | S1         S1(config)#enable secret class
+Oct 25 15:31:25 | S1         S1(config)#enable secret cisco
+Oct 25 15:31:32 | S1         S1(config)#login
+Oct 25 15:31:43 | S1         S1(config)#service password-encyption   -> service
+Oct 25 15:31:49 | S1         S1(config)#service password-encryption
+Oct 25 15:31:57 | S2         S2#cofnig t   -> cofnig
+Oct 25 15:32:00 | S2         S2#config t   -> configure terminal
+Oct 25 15:32:35 | S2         S2(config)#line console 0
+Oct 25 15:32:49 | S2         S2(config-line)#password cisco
+Oct 25 15:32:57 | S2         S2(config-line)#enable secret class
+Oct 25 15:33:03 | S2         S2(config)#enable secret cisco
+Oct 25 15:33:18 | S2         S2(config)#exit
+Oct 25 15:33:24 | S2         S2#copy run start   -> copy running-config startup-config
+Oct 25 15:33:31 | S1         S1(config)#copy run start
+Oct 25 15:33:34 | S1         S1(config)#exit
+Oct 25 15:33:38 | S1         S1#copy run start   -> copy running-config startup-config
+Oct 25 15:33:42 | S1         S1#exit
+Oct 25 15:33:49 | S1         S1>enable
+Oct 25 15:34:05 | S1         S1#config t   -> configure terminal
+Oct 25 15:34:33 | S1         S1(config)#line vty 0 15
+Oct 25 15:34:53 | S1         S1(config-line)#password cisco
+Oct 25 15:34:59 | S1         S1(config-line)#login
+Oct 25 15:35:01 | S1         S1(config-line)#exit
+Oct 25 15:35:15 | S2         S2#config t   -> configure terminal
+Oct 25 15:35:20 | S2         S2(config)#line vty 0 15
+Oct 25 15:35:24 | S2         S2(config-line)#password cisco
+Oct 25 15:35:27 | S2         S2(config-line)#login
+Oct 25 15:35:30 | S2         S2(config-line)#exit
+Oct 25 15:39:47 | S1         S1(config)#S1# configure terminal
+Oct 25 15:39:47 | S1         S1(config)#S1(config)# no enable password
+Oct 25 15:39:47 | S1         S1(config)#S1(config)# enable secret class
+Oct 25 15:39:47 | S1         S1(config)#S1(config)# end
+Oct 25 15:39:59 | S1         S1(config)#S1(config)# no enable password
+Oct 25 15:40:10 | S1         S1(config)#exit
+Oct 25 15:40:32 | S1         S1#config t   -> configure terminal
+Oct 25 15:40:38 | S1         S1(config)#no enable password
+Oct 25 15:40:46 | S1         S1(config)#enable secret class
+Oct 25 15:40:48 | S1         S1(config)#exnd
+Oct 25 15:40:52 | S1         S1(config)#end
+Oct 25 15:41:09 | S2         S2(config)#no enable password
+Oct 25 15:41:17 | S2         S2(config)#enable secret class
+Oct 25 15:41:20 | S2         S2(config)#end
+Oct 25 15:41:28 | S2         S2#copy run start   -> copy running-config startup-config
