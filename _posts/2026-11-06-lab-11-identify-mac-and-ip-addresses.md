@@ -26,7 +26,7 @@ My answers, as I wrote them down during the lab.
 
 **4. What does the Hub do with MAC addresses and IP addresses?** The hub does nothing with the IP and MAC address.
 
-**5. Did the wireless Access Point do anything with the information given to it?** No the data stayed the same.
+**5. Did the wireless Access Point do anything with the information given to it?** No, the IP and MAC address stayed the same; however, the AP did change the frames from ethernet to wireless.
 
 **6. Was any MAC or IP address lost during the wireless transfer?** Nothing was lost we received 4 replies.
 
