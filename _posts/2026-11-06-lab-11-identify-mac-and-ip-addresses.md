@@ -7,6 +7,8 @@ tags: [module-13, packet-tracer, addressing]
 **Module:** IT533 Module 13, addressing
 **Tools:** Cisco Packet Tracer, Simulation mode
 **Devices:** a router, two switches, a hub, a wireless access point, and the PCs and wireless host on the 172.16.31.0, 172.16.30.0 and 10.10.10.0 networks
+**Time:** 2 hours 11 minutes (Packet Tracer timer)
+**Score:** completed; this activity has no scored items, the grade is the answers
 
 ## What the lab asked for
 
@@ -38,7 +40,7 @@ My answers, as I wrote them down during the lab.
 
 **10. Why would the MAC addresses appear in this order?** The MAC address appears in this order to find out who is sending the request.
 
-**11. Was there a pattern to the MAC addressing in the simulation?** The pattern I saw was that each hop the packets took, the source and destination address changed
+**11. Was there a pattern to the MAC addressing in the simulation?** The pattern I saw when frames reach the router, the source and destination address changed
 
 **12. Did the switches ever replicate a PDU that was rejected with a red "X"?** Yes, when pinging 172.16.30.2 from 172.16.31.5 the switch sent packets to the router and 172.16.31.4. It also sent packets to the hub which sent it out all ports till it reached the destination.
 
@@ -52,8 +54,12 @@ My answers, as I wrote them down during the lab.
 
 **17. When you follow the reply to a ping, sometimes called a pong, do you see the sending and receiving IPv4 addresses switch?** The IP addresses do switch. The source and destination IP swap places when the receiving hosts reply to the sender.
 
-**18. What is the pattern to the IPv4 addressing used in this simulation?** The pattern is devices on the LAN end in .31.X and the private network IP addresses are end in 10.X.
+**18. What is the pattern to the IPv4 addressing used in this simulation?** The pattern is devices ending in .31.X and IP addresses ending in 10.X. are private networks.
 
 **19. Why do different IP networks need to be assigned to different ports of a router?** Because the router is forwarding PDU's to different networks and needs to be separated.
 
 **20. If this simulation was configured with IPv6 instead of IPv4, what would be different?** The IP addresses change and the MAC addresses would stay the same.
+
+## Proof it worked
+
+![Activity Results, overall feedback: completed, 02:11:24](/assets/img/lab-11/check-results-feedback.png)
